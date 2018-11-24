@@ -10,7 +10,7 @@ class Column extends Component {
   render() {
     return (
       <div className="column-container">
-        <p>Column Title</p>
+        <p>{this.props.title}</p>
         <Card />
         <Card />
         <Card />

@@ -3,17 +3,20 @@ import './Board.css';
 import Column from '../Column/Column';
 
 class Board extends Component {
-  state = {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+  
+    };
   }
 
   render() {
     return (
       <div className="board-container">
-        <Column />
-        <Column />
-        <Column />
-        <Column />
+        <Column title="Column 1" />
+        <Column title="Column 2" />
+        <Column title="Column 3" />
+        <Column title="Column 4" />
       </div>
     )
   }
