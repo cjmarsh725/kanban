@@ -6,7 +6,7 @@ class Board extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards = [
+      cards : [
         ["Test Card 1", "Test Card 2", "Test Card 3"],
         ["Test Card 1", "Test Card 2", "Test Card 3"],
         ["Test Card 1", "Test Card 2", "Test Card 3"],
