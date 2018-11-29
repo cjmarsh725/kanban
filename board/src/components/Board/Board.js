@@ -35,11 +35,9 @@ class Board extends Component {
     };
   }
 
-  swapCards = (destColIndex, colIndex, cardIndex) => {
+  swapCards = (index, colIndex) => {
     const cards = this.state.cards;
-    const cardContent = cards[colIndex][cardIndex];
-    cards[colIndex].splice(cardIndex, 1);
-    cards[destColIndex].push(cardContent);
+    cards[index].index = colIndex;
     this.setState({cards});
   }
 
