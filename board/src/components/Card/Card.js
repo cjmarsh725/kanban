@@ -1,7 +1,10 @@
 import React from 'react';
+import './Card.css'
 
 export default function Card(props) {
   return (
-    <div>{props.content}</div>
+    <div className="card-container">
+      <p>{props.content}</p>
+    </div>
   );
 }

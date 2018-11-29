@@ -10,7 +10,9 @@ class Column extends Component {
   render() {
     return (
       <div className="column-container">
-        <p>{this.props.title}</p>
+        <div className="column-title">
+          <p>{this.props.title}</p>
+        </div>
         {this.props.cards.map(c => <Card content={c} index={this.props.index} swap={this.props.swap} />)}
       </div>
     )

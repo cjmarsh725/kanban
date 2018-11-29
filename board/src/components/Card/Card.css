@@ -1,0 +1,6 @@
+.card-container {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

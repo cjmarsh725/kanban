@@ -1,4 +1,7 @@
 .board-container {
   display: flex;
   justify-content: space-around;
+  background-color: #ccc;
+  height: 100vh;
+  padding: 30px;
 }
