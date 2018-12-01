@@ -8,26 +8,32 @@ class Board extends Component {
     this.state = {
       cards : [
         {
+          id: 1,
           content : "Test Card 1",
           index: 0
         },
         {
+          id: 2,
           content : "Test Card 2",
           index: 0
         },
         {
+          id: 3,
           content : "Test Card 3",
           index: 0
         },
         {
+          id: 4,
           content : "Test Card 1",
           index: 1
         },
         {
+          id: 5,
           content : "Test Card 2",
           index: 1
         },
         {
+          id: 6,
           content : "Test Card 3",
           index: 1
         },
@@ -35,10 +41,10 @@ class Board extends Component {
     };
   }
 
-  swapCards = (cardIndex, colIndex) => {
-    const cards = this.state.cards;
-    cards[cardIndex].index = colIndex;
-    this.setState({cards});
+  swapCards = (cardId, colIndex) => {
+    const card = this.state.cards.filter(x => x.id === cardId);
+    card.index = colIndex;
+    this.setState({card});
   }
 
   render() {
