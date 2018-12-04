@@ -13,7 +13,7 @@ class Column extends Component {
         <div className="column-title">
           <p>{this.props.title}</p>
         </div>
-        {this.props.cards.map(c => <Card card={c} index={this.props.index} swap={this.props.swap} />)}
+        {this.props.cards.map(c => <Card key={c.id} card={c} index={this.props.index} swap={this.props.swap} />)}
       </div>
     )
   }

@@ -42,9 +42,11 @@ class Board extends Component {
   }
 
   swapCards = (cardId, colIndex) => {
-    const card = this.state.cards.filter(x => x.id === cardId);
-    card.index = colIndex;
-    this.setState({card});
+    const cards = this.state.cards;
+    cards.forEach(c => {
+      if (c.id === cardId) c.index = colIndex;
+    });
+    this.setState({cards});
   }
 
   render() {

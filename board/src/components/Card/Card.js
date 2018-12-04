@@ -14,9 +14,9 @@ const getPrevIndex = index => {
 export default function Card(props) {
   return (
     <div className="card-container">
-      <a href="#" className="swap-card" onClick={() => props.swap(props.index, getPrevIndex(props.index))}>&#8249;</a>
+      <a href="#" className="swap-card" onClick={() => props.swap(props.card.id, getPrevIndex(Number(props.index)))}>&#8249;</a>
       <p>{props.card.content}</p>
-      <a href="#" className="swap-card" onClick={() => props.swap(props.index, getNextIndex(props.index))}>&#8250;</a>
+      <a href="#" className="swap-card" onClick={() => props.swap(props.card.id, getNextIndex(Number(props.index)))}>&#8250;</a>
     </div>
   );
 }
