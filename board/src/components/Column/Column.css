@@ -12,3 +12,7 @@
   display: flex;
   justify-content: center;
 }
+
+.add-card {
+  margin-top: 16px;
+}

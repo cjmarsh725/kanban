@@ -49,6 +49,12 @@ class Board extends Component {
     this.setState({cards});
   }
 
+  addCard = card => {
+    const cards = this.state.cards;
+    cards.push(card);
+    this.setState({cards});
+  }
+
   render() {
     return (
       <div className="board-container">
