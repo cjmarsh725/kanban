@@ -7,6 +7,11 @@ class Column extends Component {
 
   }
 
+  addCard = () => {
+    const content = prompt("Please enter content:");
+    console.log(content);
+  }
+
   render() {
     return (
       <div className="column-container">
@@ -15,7 +20,7 @@ class Column extends Component {
         </div>
         {this.props.cards.map(c => <Card key={c.id} card={c} index={this.props.index} swap={this.props.swap} />)}
         <div className="add-card">
-          <a onClick={() => {console.log("test");}}>Add Item</a>
+          <a onClick={this.addCard}>Add Item</a>
         </div>
       </div>
     )
