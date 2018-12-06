@@ -9,7 +9,12 @@ class Column extends Component {
 
   addCard = () => {
     const content = prompt("Please enter content:");
-    console.log(content);
+    const card = {
+      id: this.props.maxId + 1,
+      content: content,
+      index: Number(this.props.index)
+    }
+    this.props.addCard(card);
   }
 
   render() {
