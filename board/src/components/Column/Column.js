@@ -19,8 +19,8 @@ class Column extends Component {
           <p>{this.props.title}</p>
         </div>
         {this.props.cards.map(c => <Card key={c.id} card={c} index={this.props.index} swap={this.props.swap} />)}
-        <div className="add-card">
-          <a onClick={this.addCard}>Add Item</a>
+        <div className="add-card-container">
+          <a className="add-card" onClick={this.addCard}>Add Item</a>
         </div>
       </div>
     )

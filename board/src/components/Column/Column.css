@@ -13,6 +13,11 @@
   justify-content: center;
 }
 
-.add-card {
+.add-card-container {
   margin-top: 16px;
+}
+
+.add-card {
+  text-decoration: underline;
+  cursor: pointer;
 }
