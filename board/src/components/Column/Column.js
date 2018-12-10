@@ -4,7 +4,7 @@ import Card from '../Card/Card';
 
 class Column extends Component {
   state = {
-
+    title: "Column " + (Number(this.props.index) + 1)
   }
 
   addCard = () => {
@@ -21,7 +21,7 @@ class Column extends Component {
     return (
       <div className="column-container">
         <div className="column-title">
-          <p>{this.props.title}</p>
+          <p>{this.state.title}</p>
         </div>
         {this.props.cards.map(c => <Card key={c.id} card={c} index={this.props.index} swap={this.props.swap} />)}
         <div className="add-card-container">
