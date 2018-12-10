@@ -8,7 +8,7 @@ class Column extends Component {
   }
 
   addCard = () => {
-    const content = prompt("Please enter content:");
+    const content = prompt("Please enter card's content:");
     const card = {
       id: this.props.maxId + 1,
       content: content,
@@ -17,10 +17,15 @@ class Column extends Component {
     this.props.addCard(card);
   }
 
+  changeTitle = () => {
+    const title = prompt("Please enter a new title:");
+    this.setState({title});
+  }
+
   render() {
     return (
       <div className="column-container">
-        <div className="column-title">
+        <div className="column-title" onClick={this.changeTitle}>
           <p>{this.state.title}</p>
         </div>
         {this.props.cards.map(c => <Card key={c.id} card={c} index={this.props.index} swap={this.props.swap} />)}
