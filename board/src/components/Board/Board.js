@@ -56,14 +56,22 @@ class Board extends Component {
     this.setState({cards});
   }
 
+  changeCard = (card, content) => {
+    const cards = this.state.cards;
+    cards.forEach(c => {
+      if (c.id === card.id) c.content = content;
+    });
+    this.setState({cards});
+  }
+
   render() {
     const maxId = Math.max.apply(Math, this.state.cards.map(function(o) { return o.id; }));
     return (
       <div className="board-container">
-        <Column index="0" maxId={maxId} addCard={this.addCard} cards={this.state.cards.filter(c => c.index === 0)} swap={this.swapCards} />
-        <Column index="1" maxId={maxId} addCard={this.addCard} cards={this.state.cards.filter(c => c.index === 1)} swap={this.swapCards} />
-        <Column index="2" maxId={maxId} addCard={this.addCard} cards={this.state.cards.filter(c => c.index === 2)} swap={this.swapCards} />
-        <Column index="3" maxId={maxId} addCard={this.addCard} cards={this.state.cards.filter(c => c.index === 3)} swap={this.swapCards} />
+        <Column index="0" maxId={maxId} addCard={this.addCard} changeCard={this.changeCard} cards={this.state.cards.filter(c => c.index === 0)} swap={this.swapCards} />
+        <Column index="1" maxId={maxId} addCard={this.addCard} changeCard={this.changeCard} cards={this.state.cards.filter(c => c.index === 1)} swap={this.swapCards} />
+        <Column index="2" maxId={maxId} addCard={this.addCard} changeCard={this.changeCard} cards={this.state.cards.filter(c => c.index === 2)} swap={this.swapCards} />
+        <Column index="3" maxId={maxId} addCard={this.addCard} changeCard={this.changeCard} cards={this.state.cards.filter(c => c.index === 3)} swap={this.swapCards} />
       </div>
     )
   }
